@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>XV años Ruby</title>
+  </head>
+  <body>
+    <section class="sec-1">
+      <p>Mis quince años</p>
+      <div class="princesa-fondo">
+        <img
+          class="princesa"
+          src="decoracion/princesa.png"
+          alt="princesa-xv-años"
+        />
+      </div>
+      <div class="plantas-sec1">
+        <img
+          class="planta"
+          src="decoracion/plantas.png"
+          alt="plantas-decoracion"
+        />
+      </div>
+
+      <div class="audio">
+        <audio id="audio">
+          <source src="musica/audio-xv.mp3" type="audio/mpeg" />
+          Tu navegador no soporta audio.
+        </audio>
+      </div>
+
+      <div class="boton-audio">
+        <button id="playBtn" type="button">
+          Escucha la magia de mis 15 💖
+        </button>
+      </div>
+      <div class="invitacion-texto">
+        <p>
+          (nombre de padre) (nombre de madre) se complacen de invitarle(s) para
+          que juntos disfrutemos de un momento lleno de encanto y feliciddad,
+          celebrando los:
+        </p>
+        <span class="numero-quince">15</span>
+        <span class="texto-15">Quince años de</span>
+        <span class="nombre-15">(nombre de quinceañera)</span>
+      </div>
+    </section>
+
+    <section class="sec-2">
+      <div id="contador">
+        <p id="text-contador">solo faltan</p>
+        <span id="dias"></span>dias <span id="horas"></span>Horas
+        <span id="minutos"></span>minutos <span id="segundos"></span>segundos
+      </div>
+
+      <div class="agendar-calendario">
+        <img
+          class="icono-calendario"
+          src="iconos/calendario.png"
+          alt="icono de calendario"
+        />
+        <button id="googleBtn">Agregar a Google Calendar</button>
+        <p class="alternativa">
+          ¿Usas iphone o Outlook?
+          <a href="javascript:void(0)" id="icsLink">Descarsgar evento</a>
+        </p>
+      </div>
+    </section>
+    <section class="sec-3">
+      <img
+        class="plantas-decoracion-lados"
+        src="decoracion/plantas-decoracion-lados.png"
+        alt="plantas-lados"
+      />
+      <img class="corona-xv" src="decoracion/corona-xv.png" alt="corona-xv" />
+      <p class="celebracion-text">Celebracion</p>
+      <p class="fecha">Miercoles 4 de noviembre de 2026 | 18:00 horas</p>
+      <p class="ubicacion">
+        Lugar de eventos bonito |<span class="direccion"> lugar 2 casa 67</span>
+      </p>
+      <div class="boton-ver-waze">
+        <img src="iconos/waze.png" icono-waze />
+        <a
+          href="https://ul.waze.com/ul?place=ChIJjQOkNgCniYURcY81-5Oy3-Y&ll=14.52145180%2C-90.56431440&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+          target="_blank"
+          >Ver ubicacion en waze</a
+        >
+      </div>
+
+      <div class="boton-ver-googlemaps">
+        <img src="iconos/google-maps.png" alt="icono de google maps" />
+        <a href="https://maps.app.goo.gl/mKpEXmutzBVSJcwZ9" target="_blank"
+          >ver ubicacion en Google maps</a
+        >
+      </div>
+    </section>
+    <section class="sec-4">
+      <img class="zapato" src="decoracion/zapato.png" alt="zapato" />
+      <img class="tacon" src="decoracion/tacon.png" alt="tacon" />
+      <div class="vestimenta">
+        <p class="titulo-vestimenta">Vestimenta</p>
+        <p class="codigo-vestimenta">
+          El codigo de vestimenta es
+          <span class="resaltar-vestimenta">Casual elegante.</span> Pero lo mas
+          importante es que te sinetas comodo en etse dia.
+        </p>
+      </div>
+    </section>
+    <section class="sec-5">
+      <img class="img-regalo" src="decoracion/regalo.png" alt="regalo" />
+      <p class="titulo-regalo">Regalo</p>
+      <p class="txt-regalo">
+        El regalo es opcional, pero si algo quieres obsequiar lo sabré apreciar.
+      </p>
+    </section>
+    <section class="sec-6">
+      <p class="titulo-confirmacion">Confirmacion de asistencia</p>
+      <p class="txt-confirmacion">
+        Por favor Confirme su asistencia lo antes posible.
+      </p>
+      <button id="boton-confirmacion" type="submit">Confirmar</button>
+    </section>
+    <section class="sec-7">
+      <p class="despedida">¡Te esperamos!</p>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
