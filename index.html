@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>XV años Ruby</title>
+    <meta property="og:title" content="Mis 15 - Estás Invitado" />
+    <meta
+      property="og:description"
+      content="Acompáñame a celebrar este día especial. Confirma tu asistencia aquí."
+    />
+    <meta
+      property="og:image"
+      content="https://yimix-dev.github.io/Invitacion-a-mis-15/img/preview.jpg?v=1"
+    />
+    <meta
+      property="og:url"
+      content="https://yimix-dev.github.io/Invitacion-a-mis-15/"
+    />
+    <meta property="og:type" content="website" />
   </head>
   <body>
     <section class="sec-1">
@@ -12,24 +26,21 @@
       <div class="princesa-fondo">
         <img
           class="princesa"
-          src="decoracion/princesa.png"
+          src="img/decoracion/princesa.png"
           alt="princesa-xv-años"
         />
       </div>
       <div class="plantas-sec1">
         <img
           class="planta"
-          src="decoracion/plantas.png"
+          src="img/decoracion/plantas.png"
           alt="plantas-decoracion"
         />
       </div>
 
       <div class="audio">
         <audio id="audio">
-          <source
-            src="Invitacion-a-mis-15/"
-            type="audio/mpeg"
-          />
+          <source src="musica/audio-xv.mp3" type="audio/mpeg" />
           Tu navegador no soporta audio.
         </audio>
       </div>
@@ -61,7 +72,7 @@
       <div class="agendar-calendario">
         <img
           class="icono-calendario"
-          src="Invitacion-a-mis-15/iconos/calendario.png"
+          src|="img/iconos/calendario.png"
           alt="icono de calendario"
         />
         <button id="googleBtn">Agregar a Google Calendar</button>
@@ -74,17 +85,21 @@
     <section class="sec-3">
       <img
         class="plantas-decoracion-lados"
-        src="decoracion/plantas-decoracion-lados.png"
+        src="img/decoracion/plantas-decoracion-lados.png"
         alt="plantas-lados"
       />
-      <img class="corona-xv" src="decoracion/corona-xv.png" alt="corona-xv" />
+      <img
+        class="corona-xv"
+        src="img/decoracion/corona-xv.png"
+        alt="corona-xv"
+      />
       <p class="celebracion-text">Celebracion</p>
       <p class="fecha">Miercoles 4 de noviembre de 2026 | 18:00 horas</p>
       <p class="ubicacion">
         Lugar de eventos bonito |<span class="direccion"> lugar 2 casa 67</span>
       </p>
       <div class="boton-ver-waze">
-        <img src="Invitacion-a-mis-15/iconos/waze.png" alt="icono de waze" />
+        <img src="img/iconos/waze.png" alt="icono de waze" />
         <a
           href="https://ul.waze.com/ul?place=ChIJjQOkNgCniYURcY81-5Oy3-Y&ll=14.52145180%2C-90.56431440&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
           target="_blank"
@@ -93,18 +108,15 @@
       </div>
 
       <div class="boton-ver-googlemaps">
-        <img
-          src="Invitacion-a-mis-15/iconos/google-maps.png"
-          alt="icono de google maps"
-        />
+        <img src="img/iconos/google-maps.png" alt="icono de google maps" />
         <a href="https://maps.app.goo.gl/mKpEXmutzBVSJcwZ9" target="_blank"
           >ver ubicacion en Google maps</a
         >
       </div>
     </section>
     <section class="sec-4">
-      <img class="zapato" src="decoracion/zapato.png" alt="zapato" />
-      <img class="tacon" src="decoracion/tacon.png" alt="tacon" />
+      <img class="zapato" src="img/decoracion/zapato.png" alt="zapato" />
+      <img class="tacon" src="img/decoracion/tacon.png" alt="tacon" />
       <div class="vestimenta">
         <p class="titulo-vestimenta">Vestimenta</p>
         <p class="codigo-vestimenta">
@@ -115,7 +127,7 @@
       </div>
     </section>
     <section class="sec-5">
-      <img class="img-regalo" src="decoracion/regalo.png" alt="regalo" />
+      <img class="img-regalo" src="img/decoracion/regalo.png" alt="regalo" />
       <p class="titulo-regalo">Regalo</p>
       <p class="txt-regalo">
         El regalo es opcional, pero si algo quieres obsequiar lo sabré apreciar.
@@ -127,6 +139,7 @@
         Por favor Confirme su asistencia lo antes posible.
       </p>
       <button id="boton-confirmacion" type="submit">Confirmar</button>
+      <div id="mensaje" class="mensaje">Gracias por tu confirmación</div>
     </section>
     <section class="sec-7">
       <p class="despedida">¡Te esperamos!</p>
