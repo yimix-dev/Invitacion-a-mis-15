@@ -4,27 +4,27 @@ const audio = document.getElementById("audio");
 btn.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
-    btn.textContent = "Pausar música ⏸️";
+    btn.textContent = "Pausar música ";
   } else {
     audio.pause();
-    btn.textContent = "Escucha la magia de mis 15 💖";
+    btn.textContent = "Escucha la magia de mis 15 ";
   }
 });
 
-const fechaObjetivo = new Date(2026, 10, 4);
+const fechaObjetivo = new Date(2026, 10, 4, 0, 0, 0);
 
 function actualizarContador() {
-  const ahora = new Date();
-  const diferencia = fechaObjetivo - ahora;
+  const ahora = Date.now();
+  const diferencia = fechaObjetivo.getTime() - ahora;
 
   if (diferencia <= 0) {
     document.getElementById("contador").innerHTML = "Llegó el día";
     return;
   }
 
-  const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-  const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
-  const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+  const dias = Math.floor(diferencia / 86400000);
+  const horas = Math.floor((diferencia / 3600000) % 24);
+  const minutos = Math.floor((diferencia / 60000) % 60);
   const segundos = Math.floor((diferencia / 1000) % 60);
 
   document.getElementById("dias").textContent = dias;
@@ -34,7 +34,6 @@ function actualizarContador() {
 }
 
 setInterval(actualizarContador, 1000);
-
 actualizarContador();
 
 // Datos del evento
@@ -92,3 +91,50 @@ END:VCALENDAR
   link.download = "evento.ics";
   link.click();
 });
+
+const boton = document.getElementById("boton-confirmacion");
+const mensaje = document.getElementById("mensaje");
+
+boton.addEventListener("click", () => {
+  mensaje.classList.add("activo");
+
+  setTimeout(() => {
+    mensaje.classList.remove("activo");
+  }, 3000); // 3 segundos
+});
+// aqui
+// Ubicación
+const btnUbicacion = document.getElementById("btnUbicacion");
+const menuUbicacion = document.getElementById("opciones-mapas");
+let autoCloseTimer = null;
+
+btnUbicacion.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const estaAbierto = menuUbicacion.classList.contains("abierto");
+
+  if (estaAbierto) {
+    cerrarMenu();
+  } else {
+    abrirMenu();
+  }
+});
+
+document.addEventListener("click", () => {
+  if (menuUbicacion.classList.contains("abierto")) cerrarMenu();
+});
+
+menuUbicacion.addEventListener("click", (e) => e.stopPropagation());
+
+function abrirMenu() {
+  menuUbicacion.classList.add("abierto");
+  clearTimeout(autoCloseTimer);
+  autoCloseTimer = setTimeout(() => {
+    cerrarMenu();
+  }, 5000);
+}
+
+function cerrarMenu() {
+  menuUbicacion.classList.remove("abierto");
+  clearTimeout(autoCloseTimer);
+}
+// aqui;

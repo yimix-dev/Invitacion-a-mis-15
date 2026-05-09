@@ -1,24 +1,586 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+/* 1. RESET Y CONFIGURACIÓN BASE */
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #333;
   background-color: #efebe1;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
+
+.inicio-planta {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 180px;
+  background-image: url("img/decoracion/plantas-pc.png");
+  background-repeat: repeat-x;
+  background-position: top left;
+  background-size: auto 180px;
+}
+
 .planta {
-  width: 300px;
+  display: none;
 }
+
+@media (max-width: 600px) {
+  .inicio-planta {
+    height: 120px;
+    background-size: auto 120px;
+  }
+}
+
+/* 3. BLOQUE HERO (PRINCESA + TEXTO) */
+.contenedor-hero {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+  margin-bottom: 50px;
+}
+
 .princesa {
-  width: 300px;
+  width: auto;
+  max-width: 85%;
+  max-height: 65vh;
+  object-fit: contain;
+  opacity: 0.8;
+  display: block;
+  z-index: 1;
+  margin: 0 auto;
+  -webkit-mask-image: radial-gradient(circle, black 60%, rgba(0, 0, 0, 0) 100%);
+  mask-image: radial-gradient(circle, black 60%, rgba(0, 0, 0, 0) 100%);
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 10px 15px rgba(93, 124, 106, 0.2));
 }
-* {
+
+.titulo-global {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  pointer-events: none;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(3rem, 18vw, 8rem);
+  color: #000000;
+  line-height: 1.1;
+  filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.8));
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* 4. BOTÓN Y AUDIO */
+.audio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  width: 100%;
+}
+
+#audio {
+  display: none;
+}
+
+.minimal-btn {
+  --accent-color: #648453;
+  --text-color: #ffffff;
+  --bg-color: #ffffff;
+  background-color: #5d7c6a;
+  color: var(--text-color);
+  border: 1px solid #bbcbb1;
+  padding: 14px 28px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  outline: none;
+  text-transform: uppercase;
+}
+
+.minimal-btn:hover {
+  background-color: var(--bg-color);
+  border-color: var(--accent-color);
+  color: var(--text-color);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.minimal-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 5. TIPOGRAFÍA GENERAL */
+.titulo-principal {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+.nombre {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* 6. TEXTOS Y CONTENEDORES DE LA INVITACIÓN */
+.padres-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.nombre-padre,
+.nombre-madre {
+  text-align: center;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #648453;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.inv-text {
   text-align: center;
 }
 
-.icono-calendario {
-  width: 20px;
+.conector-inv {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #648453;
 }
 
-.plantas-decoracion-lados {
-  width: 300px;
+.nombre-15 {
+  text-align: center;
+  font-size: 3rem;
+  color: #b8963f;
+  font-family: "Great Vibes", cursive;
 }
 
+/* 7. BLOQUE 15 AÑOS */
+.numero-15 {
+  text-align: center;
+}
+
+.caja-15 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.numero-quince {
+  margin: 0;
+  font-size: 12rem;
+  font-weight: 700;
+  color: #5d7c6a;
+  opacity: 0.9;
+  line-height: 1;
+  font-family: "Playfair Display", serif;
+  filter: drop-shadow(0 10px 20px rgba(93, 124, 106, 0.2));
+  user-select: none;
+}
+
+.texto-15 {
+  position: absolute;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8),
+    0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .numero-quince {
+    font-size: 13rem;
+  }
+  .texto-15 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+  }
+}
+
+/* 8. SECCIÓN CONTADOR */
+.sec-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#text-contador {
+  width: 100%;
+  color: #648453;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+#contador {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+}
+
+#contador .bloque-tiempo {
+  flex: 1;
+  background-color: #bbcbb1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1.15;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(100, 132, 83, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#contador .bloque-tiempo:hover {
+  transform: translateY(-3px);
+}
+
+#dias,
+#horas,
+#minutos,
+#segundos {
+  color: #648453;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 5px 0;
+}
+
+#contador .dias,
+#contador .horas,
+#contador .minutos,
+#contador .segundos {
+  color: #648453;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0;
+}
+
+/* OPTIMIZACIÓN EXTREMA PARA MÓVILES */
+@media (max-width: 375px) {
+  #contador {
+    gap: 5px;
+  }
+  #dias,
+  #horas,
+  #minutos,
+  #segundos {
+    font-size: 1.4rem;
+  }
+  #contador small {
+    font-size: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* --- ESTILOS OPTIMIZADOS PARA EL BOTÓN DE AGENDAR --- */
+
+/* Contenedor principal para centrar el botón en la página */
+.agendar-calendario {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el botón y el texto alternativo */
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+  margin: 20px 0;
+}
+
+/* El Botón: Convertido en contenedor Flex para alinear icono y texto */
+#googleBtn {
+  /* 1. Reset de estilos nativos */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit; /* Usa la fuente de tu proyecto */
+  padding: 0;
+
+  /* 2. Estilos visuales (Copia fiel del ejemplo) */
+  background-color: #ffffff; /* Fondo blanco */
+  color: #3e5667; /* Color de texto gris azulado oscuro */
+  border-radius: 30px; /* Bordes redondeados suaves */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave para elevación */
+
+  /* 3. Estructura y Tamaño (Ampliado) */
+  display: flex;
+  align-items: center; /* Centrado vertical de icono y texto */
+  justify-content: center; /* Centrado horizontal */
+  gap: 12px; /* Espacio exacto entre icono y texto */
+  width: 100%; /* Ocupa todo el ancho disponible del padre */
+  max-width: 320px; /* Ancho máximo para que no se vea gigante en PC */
+  min-height: 56px; /* Altura cómoda para tocar en móviles */
+  padding: 0 24px; /* Espaciado interno horizontal */
+
+  /* 4. Tipografía */
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-transform: none; /* Mantener mayúsculas/minúsculas del HTML */
+  letter-spacing: 0.3px;
+
+  /* 5. Transición para hover */
+  transition: all 0.3s ease;
+}
+
+/* El Icono DENTRO del botón */
+#googleBtn .icono-dentro-btn {
+  width: 30px; /* Tamaño del icono */
+  height: 30px;
+  object-fit: contain;
+  /* Ajuste de color del icono si es necesario usando filtros (opcional) */
+  /* filter: opacity(0.8); */
+}
+
+/* Efectos Interactivos (Hover/Active) */
+#googleBtn:hover {
+  background-color: #f8f9fa; /* Cambio de fondo sutil */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Sombra más pronunciada */
+  transform: translateY(-1px); /* Pequeña elevación */
+}
+
+#googleBtn:active {
+  transform: translateY(1px); /* Efecto de pulsado */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos para el texto alternativo (se mantienen) */
+.alternativa {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+}
+
+.alternativa a {
+  color: #ad9148; /* Tu color dorado para enlaces */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Estilo general (Celulares) */
 .corona-xv {
-  width: 100px;
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  height: auto;
+}
+
+/* Para pantallas más grandes (Tablets/PC) */
+@media (min-width: 768px) {
+  .corona-xv {
+    width: 100%; /* Se hace más pequeña respecto al total de la pantalla */
+    max-width: 200px;
+  }
+}
+
+.celebracion-text {
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: #b8963f;
+}
+
+.fecha {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.ubicacion {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.direccion {
+  display: block;
+  text-align: center;
+}
+
+/* Contenedor centrado */
+.contenedor-ubicacion {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Contenedor centrado */
+.contenedor-ubicacion {
+  text-align: center;
+  margin-top: 20px;
+}
+/* aqui */
+.minimal-btn {
+  --accent-color: #648453;
+  --text-color: #ffffff;
+  --bg-color: #ffffff;
+  background-color: #5d7c6a;
+  color: var(--text-color);
+  border: 1px solid #bbcbb1;
+  padding: 14px 28px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  outline: none;
+  text-transform: uppercase;
+}
+
+/* ✅ Hover: fondo más claro pero letras siguen blancas */
+.minimal-btn:hover {
+  background-color: #6e9460;
+  border-color: var(--accent-color);
+  color: #ffffff; /* antes era var(--accent-color) → ahora siempre blanco */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.minimal-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* ── Wrapper posición relativa para el dropdown ── */
+.menu-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* ── Menú desplegable ── */
+.ver-ubica {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: 1px solid #d6e2cf;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  gap: 10px;
+  flex-direction: row;
+  z-index: 100;
+  white-space: nowrap;
+  animation: fadeSlideDown 0.25s ease forwards;
+}
+
+.ver-ubica.abierto {
+  display: flex;
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ── Cada opción (Waze / Maps) ── */
+.boton-opcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #3d5a34;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.boton-opcion:hover {
+  background-color: #f0f5ec;
+  transform: translateY(-2px);
+}
+
+.boton-opcion img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.zapato,
+.tacon {
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  @media (min-width) {
+  }
+}
+
+.iconos-vest {
+  display: flex;
+  margin: px;
+  gap: px;
 }

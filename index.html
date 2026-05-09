@@ -2,7 +2,8 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="style.css" />
     <title>XV años Ruby</title>
     <meta property="og:title" content="Mis 15 - Estás Invitado" />
@@ -19,75 +20,109 @@
       content="https://yimix-dev.github.io/Invitacion-a-mis-15/"
     />
     <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section class="sec-1">
-      <p>Mis quince años</p>
-      <div class="princesa-fondo">
+      <div class="inicio-planta">
+        <img
+          class="planta"
+          src="img/decoracion/plantas-pc.png"
+          alt="plantas-decoracion"
+        />
+      </div>
+      <div class="contenedor-hero">
         <img
           class="princesa"
           src="img/decoracion/princesa.png"
           alt="princesa-xv-años"
         />
-      </div>
-      <div class="plantas-sec1">
-        <img
-          class="planta"
-          src="img/decoracion/plantas.png"
-          alt="plantas-decoracion"
-        />
+        <p class="titulo-global"><span>Mis quince años</span></p>
       </div>
 
-      <div class="audio">
+      <div class="audio-container">
         <audio id="audio">
           <source src="musica/audio-xv.mp3" type="audio/mpeg" />
           Tu navegador no soporta audio.
         </audio>
-      </div>
 
-      <div class="boton-audio">
-        <button id="playBtn" type="button">
-          Escucha la magia de mis 15 💖
+        <button id="playBtn" class="minimal-btn">
+          Escucha la magia de mis 15
         </button>
       </div>
       <div class="invitacion-texto">
-        <p>
-          (nombre de padre) (nombre de madre) se complacen de invitarle(s) para
-          que juntos disfrutemos de un momento lleno de encanto y feliciddad,
-          celebrando los:
+        <div class="padres-container">
+          <p class="nombre-padre">El señor (nombre de padre)</p>
+          <p class="nombre-madre">Y la señora (nombre de madre)</p>
+        </div>
+        <p class="inv-text">
+          se complacen de invitarle(s) para que juntos disfrutemos de un momento
+          lleno de encanto y feliciddad, celebrando los:
         </p>
-        <span class="numero-quince">15</span>
-        <span class="texto-15">Quince años de</span>
-        <span class="nombre-15">(nombre de quinceañera)</span>
+        <div class="caja-15">
+          <p class="numero-quince">15</p>
+          <p class="texto-15">Quince años</p>
+        </div>
+        <p class="conector-inv">De su amada hija:</p>
+        <p class="nombre-15">(nombre de quinceañera)</p>
       </div>
     </section>
 
     <section class="sec-2">
-      <div id="contador">
+      <section class="sec-2">
         <p id="text-contador">solo faltan</p>
-        <span id="dias"></span>dias <span id="horas"></span>Horas
-        <span id="minutos"></span>minutos <span id="segundos"></span>segundos
-      </div>
+
+        <div id="contador">
+          <div class="bloque-tiempo">
+            <span id="dias"></span>
+            <small class="dias">dias</small>
+          </div>
+
+          <div class="bloque-tiempo">
+            <span id="horas"></span>
+            <small class="horas">Horas</small>
+          </div>
+
+          <div class="bloque-tiempo">
+            <span id="minutos"></span>
+            <small class="minutos">minutos</small>
+          </div>
+
+          <div class="bloque-tiempo">
+            <span id="segundos"></span>
+            <small class="segundos">segundos</small>
+          </div>
+        </div>
+      </section>
 
       <div class="agendar-calendario">
-        <img
-          class="icono-calendario"
-          src|="img/iconos/calendario.png"
-          alt="icono de calendario"
-        />
-        <button id="googleBtn">Agregar a Google Calendar</button>
+        <button id="googleBtn">
+          <img
+            src="img/iconos/calendario.png"
+            alt="icono de calendario"
+            class="icono-dentro-btn"
+          />
+          Agendar Recordatorio
+        </button>
         <p class="alternativa">
           ¿Usas iphone o Outlook?
-          <a href="javascript:void(0)" id="icsLink">Descarsgar evento</a>
+          <a href="javascript:void(0)" id="icsLink">Descargar evento</a>
         </p>
       </div>
     </section>
     <section class="sec-3">
-      <img
-        class="plantas-decoracion-lados"
-        src="img/decoracion/plantas-decoracion-lados.png"
-        alt="plantas-lados"
-      />
+      <!-- <div class="planta-ladito">
+        <img
+          class="plantas-decoracion-lados"
+          src="img/decoracion/plantas-decoracion-lados.png"
+          alt="plantas-lados"
+        />
+      </div> -->
       <img
         class="corona-xv"
         src="img/decoracion/corona-xv.png"
@@ -95,34 +130,49 @@
       />
       <p class="celebracion-text">Celebracion</p>
       <p class="fecha">Miercoles 4 de noviembre de 2026 | 18:00 horas</p>
-      <p class="ubicacion">
-        Lugar de eventos bonito |<span class="direccion"> lugar 2 casa 67</span>
-      </p>
-      <div class="boton-ver-waze">
-        <img src="img/iconos/waze.png" alt="icono de waze" />
-        <a
-          href="https://ul.waze.com/ul?place=ChIJjQOkNgCniYURcY81-5Oy3-Y&ll=14.52145180%2C-90.56431440&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
-          target="_blank"
-          >Ver ubicacion en waze</a
-        >
+      <div class="lugar">
+        <p class="ubicacion">Lugar de eventos bonito</p>
+        <p class="direccion">lugar 2 casa 67</p>
       </div>
+      <div class="contenedor-ubication">
+        <div class="contenedor-ubicacion">
+          <div class="menu-wrapper">
+            <button class="minimal-btn" id="btnUbicacion">Ver Ubicación</button>
 
-      <div class="boton-ver-googlemaps">
-        <img src="img/iconos/google-maps.png" alt="icono de google maps" />
-        <a href="https://maps.app.goo.gl/mKpEXmutzBVSJcwZ9" target="_blank"
-          >ver ubicacion en Google maps</a
-        >
+            <div id="opciones-mapas" class="ver-ubica">
+              <a
+                href="https://ul.waze.com/ul?venue_id=176554129.1765672363.512874&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                target="_blank"
+                class="boton-opcion"
+              >
+                <img src="img/iconos/waze.png" alt="Waze" />
+                <span>Waze</span>
+              </a>
+              <a
+                href="https://maps.app.goo.gl/AWffqRcRPrHgx5Xt8"
+                target="_blank"
+                class="boton-opcion"
+              >
+                <img src="img/iconos/google-maps.png" alt="Maps" />
+                <span>Maps</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- aqui -->
       </div>
     </section>
     <section class="sec-4">
-      <img class="zapato" src="img/decoracion/zapato.png" alt="zapato" />
-      <img class="tacon" src="img/decoracion/tacon.png" alt="tacon" />
+      <div class="iconos-vest">
+        <img class="zapato" src="img/decoracion/zapato.png" alt="zapato" />
+        <img class="tacon" src="img/decoracion/tacon.png" alt="tacon" />
+      </div>
       <div class="vestimenta">
         <p class="titulo-vestimenta">Vestimenta</p>
         <p class="codigo-vestimenta">
           El codigo de vestimenta es
           <span class="resaltar-vestimenta">Casual elegante.</span> Pero lo mas
-          importante es que te sinetas comodo en etse dia.
+          importante es que te sientas comodo en este dia.
         </p>
       </div>
     </section>
