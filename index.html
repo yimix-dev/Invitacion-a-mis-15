@@ -29,13 +29,16 @@
   <body>
     <section class="hero">
       <div class="div-planta-superior-hero">
-        <img class="planta-superior-hero" src="img/decoracion/plantas-pc.png" />
+        <img
+          class="planta-superior-hero"
+          src="img/decoracion/planta-superior-hero.webp"
+        />
       </div>
 
       <div class="contenedor-imagen-h1">
         <img
           class="princesa"
-          src="img/decoracion/princesa.png"
+          src="img/decoracion/princesa.webp"
           alt="princesa-xv-años"
         />
         <h1 class="titulo-global">Mis quince años</h1>
@@ -92,102 +95,108 @@
         </div>
       </div>
     </section>
-    <!-- me quede aqui we -->
 
-    <div class="agendar-calendario">
-      <button id="googleBtn">
+    <section class="agendar-calendario">
+      <button id="googleCalendarBtn">
         <img
-          src="img/iconos/calendario.png"
+          src="img/iconos/icono-calendario.webp"
           alt="icono de calendario"
           class="icono-dentro-btn"
         />
         Agendar Recordatorio
       </button>
       <p class="alternativa">
-        ¿Usas iphone u Outlook?
+        ¿Usas otro calendario?
         <a href="javascript:void(0)" id="icsLink">Descargar evento</a>
       </p>
-    </div>
+    </section>
 
-    <section class="sec-3">
-      <div class="planta-ladito">
+    <section class="fecha-celebracion">
+      <div class="imagenes-celebracion">
         <img
           class="plantas-decoracion-lados"
-          src="img/decoracion/plantas-decoracion-lados.png"
+          src="img/decoracion/plantas-decoracion-lados.webp"
           alt="plantas-lados"
         />
+        <img
+          class="corona-xv"
+          src="img/decoracion/corona-xv.webp"
+          alt="corona-xv"
+        />
       </div>
-      <img
-        class="corona-xv"
-        src="img/decoracion/corona-xv.png"
-        alt="corona-xv"
-      />
-      <p class="celebracion-text">Celebracion</p>
+
+      <h2 class="subtitulo-celebracion">Celebracion</h2>
       <p class="fecha">Miercoles 4 de noviembre de 2026 | 18:00 horas</p>
       <div class="lugar">
         <p class="ubicacion">Lugar de eventos bonito</p>
         <p class="direccion">lugar 2 casa 67</p>
       </div>
-      <div class="contenedor-ubication">
-        <div class="contenedor-ubicacion">
-          <div class="menu-wrapper">
-            <button class="minimal-btn" id="btnUbicacion">Ver Ubicación</button>
+    </section>
 
-            <div id="opciones-mapas" class="ver-ubica">
-              <a
-                href="https://ul.waze.com/ul?venue_id=176554129.1765672363.512874&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
-                target="_blank"
-                class="boton-opcion"
-              >
-                <img src="img/iconos/waze.png" alt="Waze" />
-                <span>Waze</span>
-              </a>
-              <a
-                href="https://maps.app.goo.gl/AWffqRcRPrHgx5Xt8"
-                target="_blank"
-                class="boton-opcion"
-              >
-                <img src="img/iconos/google-maps.png" alt="Maps" />
-                <span>Maps</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- aqui -->
+    <section class="contenedor-ubicacion">
+      <button class="ver-ubicacion" id="btnUbicacion">Ver Ubicación</button>
+
+      <div id="opcion-waze" class="ubicacion-waze">
+        <a
+          href="https://ul.waze.com/ul?venue_id=176554129.1765672363.512874&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+          target="_blank"
+          class="btn-opcion-waze"
+        >
+          <img src="img/iconos/waze.webp" />
+          <span>Waze</span>
+        </a>
+      </div>
+
+      <div class="ubicacion-googlemaps">
+        <a
+          href="https://maps.app.goo.gl/AWffqRcRPrHgx5Xt8"
+          target="_blank"
+          class="btn-opcion-googlemaps"
+        >
+          <img src="img/iconos/google-maps.webp" alt="Maps" />
+          <span>google Maps</span>
+        </a>
       </div>
     </section>
-    <section class="sec-4">
-      <div class="iconos-vest">
-        <img class="zapato" src="img/decoracion/zapato.png" alt="zapato" />
-        <img class="tacon" src="img/decoracion/tacon.png" alt="tacon" />
+
+    <section class="vestimenta">
+      <div class="iconos-vestimenta">
+        <img class="zapato" src="img/decoracion/zapato.webp" alt="zapato" />
+        <img class="tacon" src="img/decoracion/tacon.webp" alt="tacon" />
       </div>
-      <div class="vestimenta">
+
+      <div class="texto-vestimenta">
         <p class="titulo-vestimenta">Vestimenta</p>
+        <p class="subtitulo-vestimenta">El codigo de vestimenta es</p>
         <p class="codigo-vestimenta">
-          El codigo de vestimenta es
-          <span class="resaltar-vestimenta">Casual elegante.</span> Pero lo mas
-          importante es que te sientas comodo en este dia.
+          Casual elegante, Pero lo mas importante es que te sientas comodo en
+          este dia.
         </p>
       </div>
     </section>
-    <section class="sec-5">
-      <img class="img-regalo" src="img/decoracion/regalo.png" alt="regalo" />
-      <p class="titulo-regalo">Regalo</p>
+
+    <section class="regalos">
+      <img class="img-regalo" src="img/decoracion/regalo.webp" />
+      <p class="titulo-regalo">Regalos</p>
       <p class="txt-regalo">
         El regalo es opcional, pero si algo quieres obsequiar lo sabré apreciar.
       </p>
     </section>
-    <section class="sec-6">
+
+    <section class="confirmar-asistencia">
       <p class="titulo-confirmacion">Confirmacion de asistencia</p>
       <p class="txt-confirmacion">
         Por favor Confirme su asistencia lo antes posible.
       </p>
       <button id="boton-confirmacion" type="submit">Confirmar</button>
-      <div id="mensaje" class="mensaje">Gracias por tu confirmación</div>
+      <div id="mensaje-comfirmacion" class="mensaje-confirmacion">
+        Gracias por tu confirmación
+      </div>
     </section>
-    <section class="sec-7">
-      <p class="despedida">¡Te esperamos!</p>
-    </section>
+    <div class="despedida">
+      <p class="texto-despedida">¡Te esperamos!</p>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
+<!-- me quede aqui we -->
